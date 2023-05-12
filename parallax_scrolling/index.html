@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling</title>
+    <link rel="stylesheet" href="reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap" rel="stylesheet">
+
+    <style>
+        
+        .scene {
+            /* 사용자가 보는 만큼 이미지 크기 지정 */
+            /* vh : 뷰 포트의 높이값을 지정  */
+            height: 100vh;
+            /* 엘리먼트보다 더 큰 태그가 section 안에 있다면 부모보다 큰 자식을 감춤 */
+            overflow: hidden;
+            /* background-attachment : fixed -> scene의 배경이미지가 스크롤과는 상관없이 고정된 위치를 고수함 */
+            background-attachment: fixed;
+            /* 이미지가 잘리는 구간이 없도록 리사이징이 됨 */
+            background-size: cover;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 200;
+        }
+        .scene.one {
+            background-image: url(img/sky_1.png);
+        }
+        .scene.two {
+            background-image: url(img/sky_2.png);
+        }
+        .scene.three {
+            background-image: url(img/sky_3.png);
+        }
+        .scene header {
+            color: white;
+            max-width: 80%;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            /* translateX : 자기 자신의 폭만큼 엘리먼트를 움직여줌 */
+            /* translateY : 자기 자신의 높이만큼 엘리먼트를 움직여줌 */
+            transform: translateX(-50%) translateY(-50%);
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        .scene header h1 {
+            /* 숫자rem : 기본 폰트를 숫자의 배수만큼 크게 해줌 */
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+        .scene header h1:after{
+            content: '';
+            border-bottom: 1px solid white;
+            width: 8rem;
+            display: block;
+            margin: 0 auto;
+            margin-top: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- section = 일종의 씬 -->
+    <section class="scene one">
+        <header >
+            <h1>
+                Hello Everyone! 
+            </h1>
+            <br>
+            My name is Yun-Gyung Kim.
+            <br>
+            I want to be a front-end developer.
+            <br>
+            Nice to meet you!
+            <br>
+            Thank you for watching my web-site.
+        </header>
+    </section>
+    <section class="scene two">
+        <header >
+            <header >
+            <h1>
+                Hello Everyone! 
+            </h1>
+            <br>
+            My name is Yun-Gyung Kim.
+            <br>
+            I want to be a front-end developer.
+            <br>
+            Nice to meet you!
+            <br>
+            Thank you for watching my web-site.
+        </header>
+    </section>
+    <section class="scene three">
+        <header >
+            <h1>
+                Hello Everyone! 
+            </h1>
+            <br>
+            My name is Yun-Gyung Kim.
+            <br>
+            I want to be a front-end developer.
+            <br>
+            Nice to meet you!
+            <br>
+            Thank you for watching my web-site.
+    </section>
+</body>
+</html>

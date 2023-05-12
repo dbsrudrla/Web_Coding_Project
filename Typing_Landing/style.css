@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightpink;
+}
+
+/* .wrap에 들어있는 요소들을 항상 중앙에 위치하도록 하는 것 (수평과 수직) */
+/* icon 폰트는 CSS의 텍스트와 관련된 속성을 그대로 적용할 수 있음 */
+.wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-family: 'Sorce Sans Pro', sans-serif;
+}
+
+.material-symbols-outlined {
+    font-size: 10rem;
+}
+
+.lg-text {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.sm-text {
+    font-size: 1.5rem;
+}
+
+#dynamic {
+    position: relative;
+    display: inline-block;
+}
+
+/* 커서처럼 보이도록 코딩 */
+#dynamic::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 4px;
+    height: 100%;
+    background-color: white;
+}
+
+#dynamic.active::after {
+    display: none;
+}
